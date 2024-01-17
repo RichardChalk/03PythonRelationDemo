@@ -9,6 +9,7 @@ with open ("script.sql") as file:
      sqlScript = file.read()
 
 cur.executescript(sqlScript)
+conn.commit()
 
 # SQL-fråga som använder LEFT JOIN för att sammanföra members och employer
 query = """
